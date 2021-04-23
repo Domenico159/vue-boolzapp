@@ -5,6 +5,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+body{
+    min-width: 900px;
+}
+
 
 /* Main */
 
@@ -24,6 +28,7 @@ main{
 
 main .main-content{
     width: 1250px;
+    min-width: 900px;
     height: 95vh;
     background: #fff;
     box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.5);
@@ -260,4 +265,22 @@ main .main-content .content .content-footer input{
     outline: none;
     border-radius: 20px;
     padding: 5px 15px;
+}
+
+
+/* RESPONSIVE */
+
+section.message-responsive{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px ;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom ,
+        #32a093 0%,
+        #32a093 15%,
+        #e0e0d7 15%,
+        #e0e0d7 100%
+    );
+    color: #32a093;
 }

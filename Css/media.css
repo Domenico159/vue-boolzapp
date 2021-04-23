@@ -1,0 +1,21 @@
+
+/* Messagio sotto i  900px */
+
+@media screen and (max-width:900px){
+    
+    main{
+        display: none;
+    }
+
+    body{
+        min-width: 100vw;
+    }
+
+}
+@media screen and (min-width:901px){
+    
+    section.message-responsive{
+        display: none;
+    }
+
+}
