@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./Css/style.css">
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    
+    <main id="main">
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="user">
+                    <div class="box-user">
+                        <img src="./img/avataaars.png" alt="">
+                        <h4>Domenico</h4>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <div class="notifiche">
+                    <div class="box-img">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="box-text">
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                        <a href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <div class="search">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <div class="contatti">
+                    <ul>
+                        <li v-for="(element,index) in yourPropNameHere"
+                        >
+                            <img :src=" `./img/avatar${element.avatar}.jpg` " alt="">
+                            <h4>{{ element.name }}</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header-content">
+                    <img src="./img/avatar_1.jpg" alt="">
+                    <div class="box-text-header">
+                        <h4>Michele</h4>
+                        <span>Ultimo accesso oggi alle 10.35</span>
+                    </div>
+                </div>
+                <div class="content-chat">
+                    <div class="send box">
+                        <div class="message mess-send">
+                            <span class="text">Messaggio inviato</span>
+                            <span class="data">23/04/2021 <span>15:50.00</span></span>
+                        </div>
+                    </div>
+                    <div class="received box">
+                        <div class="message mess-received">
+                            <span>Messaggio ricevuto</span>
+                            <span class="data">23/04/2021 <span>15:50.00</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-footer">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Js -->
+    <script src="./Js/main.js"></script>
+</body>
+</html>
