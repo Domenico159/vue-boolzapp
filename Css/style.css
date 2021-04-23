@@ -129,6 +129,7 @@ main .main-content .sidebar .contatti{
     flex-grow: 1;
     background-color: #fff;
     margin-top: 5px;
+    overflow-y: auto;
 }
 
 main .main-content .sidebar .contatti ul li img{
@@ -205,6 +206,7 @@ main .main-content .content .content-chat{
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    overflow-y: auto;
 }
 
 main .main-content .content .content-chat .box{
