@@ -165,6 +165,7 @@ main .main-content .content .header-content{
     border-left: 2px solid #bababa;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -179,6 +180,18 @@ main .main-content .content .header-content img{
     border-radius: 50%;
     margin-right: 15px;
     margin-left: 10px;
+}
+
+main .main-content .content .header-content .box-user-header{
+    display: flex;
+}
+main .main-content .content .header-content .box-icon-header{
+    margin-right: 30px;
+}
+main .main-content .content .header-content .box-icon-header i{
+    margin-left: 15px;
+    font-size: 20px;
+    color: #bababa;
 }
 
 main .main-content .content .content-chat{
