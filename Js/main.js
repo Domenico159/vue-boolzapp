@@ -187,6 +187,7 @@ const main = new Vue({
     ],
     indexActive:0,
     newMess:'',
+    clickEmojiStatus:false,
 
     },
     created(){
@@ -247,7 +248,13 @@ const main = new Vue({
                     }
                 )
             },3000)
-        }
+        },
+        activeEmoji(){
+
+            this.clickEmojiStatus = !this.clickEmojiStatus ;
+            console.log(this.clickEmojiStatus);
+
+        },
 
     }
 

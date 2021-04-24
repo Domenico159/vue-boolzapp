@@ -249,7 +249,33 @@ main .main-content .content .content-footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+}
 
+main .main-content .content .content-footer .emoji{
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: -155px;
+    background-color: #fff;
+    left:10px;
+    display: none;
+    border-radius: 10px;
+}
+main .main-content .content .content-footer .emoji .box-emoji{
+    width: calc(100% / 12 - 10px );
+    margin: 5px;
+}
+
+main .main-content .content .content-footer .emoji i{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+main .main-content .content .content-footer .emoji.active{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 main .main-content .content .content-footer i{
