@@ -98,6 +98,92 @@ const main = new Vue({
                 }
             ],
         },
+        {
+            name: 'Francesco',
+            avatar: '_5',
+            visible: false,
+            eta:30,
+            colorePreferito:'Giallo',
+            messages: [
+                {
+                    date: '11/01/2020 16:00:55',
+                    message: 'Ciao come stai ?',
+                    status: 'sent'
+                },
+                {
+                    date: '11/01/2020 16:05:00',
+                    message: 'Ehy , ciao bene , tu ?',
+                    status: 'received'
+                },
+                {
+                    date: '11/01/2020 16:10:00',
+                    message: 'Tutto bene , non ci sentivamo da 1 anno ',
+                    status: 'sent'
+                },
+            ],
+        },
+        {
+            name: 'Marco',
+            avatar: '_6',
+            visible: false,
+            eta:29,
+            colorePreferito:'Nero',
+            messages: [
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Ciao Domenico , apposto il corso Boolean?',
+                    status: 'received'
+                },
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Ciao Marco , si tutto apposto , sta andando alla grande',
+                    status: 'sent'
+                },
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Sono contento ',
+                    status: 'received'
+                },
+            ],
+        },
+        {
+            name: 'Matteo',
+            avatar: '_7',
+            visible: false,
+            eta:19,
+            colorePreferito:'Verde',
+            messages: [
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Ehy Matteo , domani ci vediamo?',
+                    status: 'sent'
+                },
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Ciao Bro , si domani ci vediamo alle 16:00',
+                    status: 'received'
+                }
+            ],
+        },
+        {
+            name: 'Lorenzo',
+            avatar: '_8',
+            visible: false,
+            eta:21,
+            colorePreferito:'Binaco',
+            messages: [
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che siamo in zona rossa?',
+                    status: 'sent'
+                },
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Si, purtroppo ho sentito',
+                    status: 'received'
+                }
+            ],
+        },
     ],
     indexActive:0,
     newMess:'',
