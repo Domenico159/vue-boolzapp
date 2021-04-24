@@ -126,7 +126,7 @@ const main = new Vue({
             // Possibili risposte
             switch (this.newMess.toLowerCase()) {
                 case 'ciao':
-                    this.risposta('ciao')
+                    this.risposta('Ciao')
                     break;
                 case 'come stai?':
                      this.risposta('Molto bene grazie')

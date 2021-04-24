@@ -266,3 +266,26 @@ main .main-content .content .content-footer input{
     border-radius: 20px;
     padding: 5px 15px;
 }
+
+/* RESPONSIVE */
+
+section.message-responsive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px ;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom ,
+        #32a093 0%,
+        #32a093 15%,
+        #e0e0d7 15%,
+        #e0e0d7 100%
+    );
+    color: #32a093;
+}
+
+section.message-responsive i {
+    font-size:80px ;
+    margin-top: 30px;
+}
