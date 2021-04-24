@@ -188,6 +188,7 @@ const main = new Vue({
     indexActive:0,
     newMess:'',
     clickEmojiStatus:false,
+    statusUltimoAccesso:true,
 
     },
     created(){
@@ -233,6 +234,11 @@ const main = new Vue({
         
             }
 
+            setTimeout(() =>{
+                this.statusUltimoAccesso = false
+                
+            },500)
+
             this.newMess = '';
             this.$refs.newMessage.focus()
 
@@ -247,12 +253,13 @@ const main = new Vue({
                         status:'received'
                     }
                 )
+                this.statusUltimoAccesso = true
             },3000)
         },
         activeEmoji(){
 
             this.clickEmojiStatus = !this.clickEmojiStatus ;
-            console.log(this.clickEmojiStatus);
+            // console.log(this.clickEmojiStatus);
 
         },
 

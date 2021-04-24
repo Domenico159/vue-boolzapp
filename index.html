@@ -66,7 +66,10 @@
                         <img :src="`./img/avatar${yourPropNameHere[indexActive].avatar}.jpg`" alt="">
                     <div class="box-text-header">
                         <h4>{{ yourPropNameHere[indexActive].name }}</h4>
-                        <span>Ultimo accesso oggi alle 10.35</span>
+                        <span v-if="statusUltimoAccesso"
+                        >Ultimo accesso oggi alle 10.35</span>
+                        <span v-else
+                        >sta scrivendo...</span>
                     </div>
                     </div>
                     <div class="box-icon-header">
