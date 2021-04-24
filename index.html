@@ -67,7 +67,7 @@
                     <div class="box-text-header">
                         <h4>{{ yourPropNameHere[indexActive].name }}</h4>
                         <span v-if="statusUltimoAccesso"
-                        >Ultimo accesso oggi alle 10.35</span>
+                        >{{ `Ultimo accesso oggi alle ${yourPropNameHere[indexActive].ultimoAccesso}` }}</span>
                         <span v-else
                         >sta scrivendo...</span>
                     </div>

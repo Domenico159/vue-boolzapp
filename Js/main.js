@@ -13,6 +13,7 @@ const main = new Vue({
             visible: false,
             colorePreferito:'Azzurro',
             eta:25,
+            ultimoAccesso:'9.00 am',
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -36,6 +37,7 @@ const main = new Vue({
             avatar: '_2',
             visible: false,
             eta:20,
+            ultimoAccesso:'10.15 am',
             colorePreferito:'Verde',
             messages: [
                 {
@@ -61,6 +63,7 @@ const main = new Vue({
             colorePreferito:'Rosso',
             visible: false,
             eta:28,
+            ultimoAccesso:'7.40 pm',
             messages: [
                 {
                     date: '28/03/2020 10:10:40',
@@ -84,6 +87,7 @@ const main = new Vue({
             avatar: '_4',
             visible: false,
             eta:21,
+            ultimoAccesso:'9.00 pm',
             colorePreferito:'Rosa',
             messages: [
                 {
@@ -103,6 +107,7 @@ const main = new Vue({
             avatar: '_5',
             visible: false,
             eta:30,
+            ultimoAccesso:'12.00 am',
             colorePreferito:'Giallo',
             messages: [
                 {
@@ -127,6 +132,7 @@ const main = new Vue({
             avatar: '_6',
             visible: false,
             eta:29,
+            ultimoAccesso:'1.30 pm',
             colorePreferito:'Nero',
             messages: [
                 {
@@ -151,6 +157,7 @@ const main = new Vue({
             avatar: '_7',
             visible: false,
             eta:19,
+            ultimoAccesso:'7.00 am',
             colorePreferito:'Verde',
             messages: [
                 {
@@ -170,6 +177,7 @@ const main = new Vue({
             avatar: '_8',
             visible: false,
             eta:21,
+            ultimoAccesso:'3.00 am',
             colorePreferito:'Binaco',
             messages: [
                 {
