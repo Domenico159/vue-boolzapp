@@ -50,6 +50,7 @@
                 <div class="contatti">
                     <ul>
                         <li v-for="(element,index) in yourPropNameHere"
+                             @click="activeIndex(index)"
                         >
                             <img :src=" `./img/avatar${element.avatar}.jpg` " alt="">
                             <h4>{{ element.name }}</h4>
@@ -62,9 +63,9 @@
 
                 <div class="header-content">
                     <div class="box-user-header">
-                        <img src="./img/avatar_1.jpg" alt="">
+                        <img :src="`./img/avatar${yourPropNameHere[indexActive].avatar}.jpg`" alt="">
                     <div class="box-text-header">
-                        <h4>Michele</h4>
+                        <h4>{{ yourPropNameHere[indexActive].name }}</h4>
                         <span>Ultimo accesso oggi alle 10.35</span>
                     </div>
                     </div>
@@ -76,18 +77,23 @@
                 </div>
 
                 <div class="content-chat">
-                    <div class="chat">
-                        <div class="send box">
+                    <div v-for="(element,index) in yourPropNameHere[indexActive].messages"
+                    class="chat">
+                        <div v-if="element.status == 'sent'"
+                        :class="{send:element.status == 'sent'}"
+                              class="box">    
                             <div class="message mess-send">
-                                <span class="text">Messaggio inviato</span>
-                                <span class="data">23/04/2021 <span>15:50.00</span></span>
+                                <span class="text">{{ element.message }}</span>
+                                <span class="data">{{ element.date }}</span>
                             </div>
                         </div>
     
-                        <div class="received box">
+                        <div v-if="element.status == 'received'"
+                        :class="{received:element.status == 'received'}"
+                        class="box">
                             <div class="message mess-received">
-                                <span>Messaggio ricevuto</span>
-                                <span class="data">23/04/2021 <span>15:50.00</span></span>
+                                <span>{{ element.message }}</span>
+                                <span class="data">{{ element.date }}</span>
                             </div>
                         </div>
                     </div>
@@ -95,21 +101,16 @@
 
                 <div class="content-footer">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input @keyup.enter="sendNewMess"
+                    v-model.trim="newMess"
+                    ref="newMessage"
+                    type="text" placeholder="Scrivi un messaggio">
                     <i class="fas fa-microphone"></i>
                 </div>
 
             </div>
         </div>
     </main>
-
-    <section class="message-responsive">
-
-        <h1>Risoluzione non supportata , scarica l'app per mobile </h1>
-
-        <i class="fab fa-whatsapp"></i>
-
-    </section>
 
     <!-- Js -->
     <script src="./Js/main.js"></script>

@@ -10,7 +10,9 @@ const main = new Vue({
         {
             name: 'Michele',
             avatar: '_1',
-            visible: true,
+            visible: false,
+            colorePreferito:'Azzurro',
+            eta:25,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -32,7 +34,9 @@ const main = new Vue({
         {
             name: 'Fabio',
             avatar: '_2',
-            visible: true,
+            visible: false,
+            eta:20,
+            colorePreferito:'Verde',
             messages: [
                 {
                     date: '20/03/2020 16:30:00',
@@ -54,7 +58,9 @@ const main = new Vue({
         {
             name: 'Samuele',
             avatar: '_3',
-            visible: true,
+            colorePreferito:'Rosso',
+            visible: false,
+            eta:28,
             messages: [
                 {
                     date: '28/03/2020 10:10:40',
@@ -76,7 +82,9 @@ const main = new Vue({
         {
             name: 'Luisa',
             avatar: '_4',
-            visible: true,
+            visible: false,
+            eta:21,
+            colorePreferito:'Rosa',
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -91,7 +99,70 @@ const main = new Vue({
             ],
         },
     ],
+    indexActive:0,
+    newMess:'',
 
     },
+    created(){
+
+        // this.risposta()
+
+    },
+    methods:{
+
+        activeIndex(index){
+
+            this.indexActive = index;
+        },
+        sendNewMess(){
+            if(this.newMess !== ''){
+                this.yourPropNameHere[this.indexActive].messages.push(
+                    {
+                        message:this.newMess,
+                        status:'sent'
+                    }
+                )
+            }
+            // Possibili risposte
+            switch (this.newMess.toLowerCase()) {
+                case 'ciao':
+                    this.risposta('ciao')
+                    break;
+                case 'come stai?':
+                     this.risposta('Molto bene grazie')
+                    break;
+                    case 'ti piace la pizza?':
+                    this.risposta('si')
+                    break;
+                case 'il tuo colore preferito?':
+                     this.risposta(`tutti i colori mi piacciono , ma preferisco ${this.yourPropNameHere[this.indexActive].colorePreferito}`)
+                    break;
+                    case 'come ti chiami?':
+                    this.risposta(`Il mio nome è ${this.yourPropNameHere[this.indexActive].name}`)
+                    break;
+                case 'quanti anni hai?':
+                     this.risposta(`Ho ${this.yourPropNameHere[this.indexActive].eta} anni`)
+                    break;
+        
+            }
+
+            this.newMess = '';
+            this.$refs.newMessage.focus()
+
+            
+            
+        },
+        risposta(element){
+            setTimeout(() =>{
+                this.yourPropNameHere[this.indexActive].messages.push(
+                    {
+                        message:element,
+                        status:'received'
+                    }
+                )
+            },3000)
+        }
+
+    }
 
          });
