@@ -364,21 +364,29 @@ main.dark{
 
 
 main.dark .main-content .sidebar .contatti.dark{
-    background-color: #000;
+    background-color: #16161a;
 }
 
 main.dark .main-content .sidebar .notifiche{
-    background-color: #c494fe;
+    background-color: #72757e;
+    color:#fffffe ;
+}
+main.dark .main-content .sidebar .notifiche a{
+    color:#fffffe ;
+}
+
+main.dark .main-content .sidebar .notifiche .box-img{
+    color:#72757e ;
 }
 
 main.dark .main-content .sidebar .contatti.dark li{
-    background-color: #1f1f1f;
+    background-color: #72757e;
     color: #fbfbfb;
     border: none;
 }
 
 
 main.dark  img{
-    filter: grayscale(40%);
+    filter: grayscale(20%);
 }
 
