@@ -20,7 +20,8 @@
 </head>
 <body>
     
-    <main id="main">
+    <main :class="{dark:darkModeStatus}"
+    id="main">
         <div class="main-content">
             <div class="sidebar">
                 <div class="user">
@@ -47,7 +48,8 @@
                     <button><i class="fas fa-search"></i></button>
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
-                <div class="contatti">
+                <div :class="{dark:darkModeStatus}"
+                class="contatti">
                     <ul>
                         <li v-for="(element,index) in yourPropNameHere"
                              @click="activeIndex(index)"
@@ -79,7 +81,8 @@
                     </div>
                 </div>
 
-                <div class="content-chat">
+                <div :class="{dark:darkModeStatus}"
+                class="content-chat">
                     <div v-for="(element,index) in yourPropNameHere[indexActive].messages"
                     class="chat">
                         <div v-if="element.status == 'sent'"
@@ -156,7 +159,22 @@
 
             </div>
         </div>
+
+        <!-- Dark-mode -->
+
+        <div class="dark-mode">
+            <i :class="{dark:!darkModeStatus}"
+            @click="darkMode"
+            class="fas fa-sun"></i>
+            <i :class="{dark:darkModeStatus}"
+            @click="darkMode"
+            class="fas fa-moon"></i>
+        </div>
+
+
     </main>
+
+    
 
     <!-- Messaggio responsive -->
     <section class="message-responsive">

@@ -6,6 +6,7 @@
 }
 
 
+
 /* Main */
 
 main{
@@ -315,3 +316,69 @@ section.message-responsive i {
     font-size:80px ;
     margin-top: 30px;
 }
+
+/* Dark mode */
+.dark-mode{
+    position: absolute;
+    z-index: 10;
+    bottom: 70px;
+    left: 30px;
+}
+
+.dark-mode .fa-sun{
+    font-size: 36px;
+    position: absolute;
+    cursor: pointer;
+    color: #fbfbfb;
+}
+
+.dark-mode .fa-sun.dark{
+    display: none;
+}
+
+.dark-mode .fa-moon{
+    font-size: 36px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.dark-mode .fa-moon.dark{
+    display: none;
+}
+
+
+main .main-content .content .content-chat.dark{
+    filter: invert();
+}
+
+main.dark{
+    background: linear-gradient(
+        to bottom ,
+        #18574f 0%,
+        #18574f 15%,
+        #696969 15%,
+        #696969 100%
+    );
+}
+
+
+
+main.dark .main-content .sidebar .contatti.dark{
+    background-color: #000;
+}
+
+main.dark .main-content .sidebar .notifiche{
+    background-color: #c494fe;
+}
+
+main.dark .main-content .sidebar .contatti.dark li{
+    background-color: #1f1f1f;
+    color: #fbfbfb;
+    border: none;
+}
+
+
+main.dark  img{
+    filter: grayscale(40%);
+}
+

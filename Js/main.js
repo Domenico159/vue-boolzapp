@@ -197,6 +197,7 @@ const main = new Vue({
     newMess:'',
     clickEmojiStatus:false,
     statusUltimoAccesso:true,
+    darkModeStatus:false,
 
     },
     created(){
@@ -269,6 +270,9 @@ const main = new Vue({
             this.clickEmojiStatus = !this.clickEmojiStatus ;
             // console.log(this.clickEmojiStatus);
 
+        },
+        darkMode(){
+            this.darkModeStatus = ! this.darkModeStatus;
         },
 
     }
