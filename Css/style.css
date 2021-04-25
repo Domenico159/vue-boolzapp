@@ -41,6 +41,7 @@ main .main-content .sidebar{
 
 main .main-content .sidebar .user{
     height: 60px;
+    min-height: 60px;
     background-color:#ededed;
     display: flex;
     align-items: center;
@@ -166,6 +167,7 @@ main .main-content .content{
 
 main .main-content .content .header-content{
     height: 60px;
+    min-height: 60px;
     background-color: #ededed;
     border-left: 2px solid #bababa;
     display: flex;
@@ -245,6 +247,7 @@ main .main-content .content .content-chat .box .message .data{
 
 main .main-content .content .content-footer{
     height: 50px;
+    min-height: 50px;
     background: #f4f0ed;
     border-left: 2px solid #bababa;
     display: flex;
