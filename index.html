@@ -23,7 +23,10 @@
     <main :class="{dark:darkModeStatus}"
     id="main">
         <div class="main-content">
+            <!-- Sidebar **************************** -->
             <div class="sidebar">
+
+                <!-- Profilo -->
                 <div class="user">
                     <div class="box-user">
                         <img src="./img/avataaars.png" alt="">
@@ -35,6 +38,8 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
+
+                <!-- Notifiche -->
                 <div class="notifiche">
                     <div class="box-img">
                         <i class="fas fa-bell-slash"></i>
@@ -44,14 +49,21 @@
                         <a href="">Attiva notifiche desktop</a>
                     </div>
                 </div>
+
+                <!-- Search -->
                 <div class="search">
                     <button><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input @keyup="filtered"
+                    v-model.trim="search"
+                    type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
+
+                <!-- Contatti -->
                 <div :class="{dark:darkModeStatus}"
                 class="contatti">
                     <ul>
                         <li v-for="(element,index) in yourPropNameHere"
+                             v-if="element.visible"
                              @click="activeIndex(index)"
                         >
                             <img :src=" `./img/avatar${element.avatar}.jpg` " alt="">

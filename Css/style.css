@@ -70,7 +70,8 @@ main .main-content .sidebar .user .box-user img{
 }
 
 main .main-content .sidebar .notifiche{
-    height: 80px;
+    height: 70px;
+    min-height: 70px;
     background-color: #a2dffe;
     display: flex;
     align-items: center;

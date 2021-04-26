@@ -10,7 +10,7 @@ const main = new Vue({
         {
             name: 'Michele',
             avatar: '_1',
-            visible: false,
+            visible: true,
             colorePreferito:'Azzurro',
             eta:25,
             ultimoAccesso:'9.00 am',
@@ -35,7 +35,7 @@ const main = new Vue({
         {
             name: 'Fabio',
             avatar: '_2',
-            visible: false,
+            visible: true,
             eta:20,
             ultimoAccesso:'10.15 am',
             colorePreferito:'Verde',
@@ -61,7 +61,7 @@ const main = new Vue({
             name: 'Samuele',
             avatar: '_3',
             colorePreferito:'Rosso',
-            visible: false,
+            visible: true,
             eta:28,
             ultimoAccesso:'7.40 pm',
             messages: [
@@ -85,7 +85,7 @@ const main = new Vue({
         {
             name: 'Luisa',
             avatar: '_4',
-            visible: false,
+            visible: true,
             eta:21,
             ultimoAccesso:'9.00 pm',
             colorePreferito:'Rosa',
@@ -105,7 +105,7 @@ const main = new Vue({
         {
             name: 'Francesco',
             avatar: '_5',
-            visible: false,
+            visible: true,
             eta:30,
             ultimoAccesso:'12.00 am',
             colorePreferito:'Giallo',
@@ -130,7 +130,7 @@ const main = new Vue({
         {
             name: 'Marco',
             avatar: '_6',
-            visible: false,
+            visible: true,
             eta:29,
             ultimoAccesso:'1.30 pm',
             colorePreferito:'Nero',
@@ -155,7 +155,7 @@ const main = new Vue({
         {
             name: 'Matteo',
             avatar: '_7',
-            visible: false,
+            visible: true,
             eta:19,
             ultimoAccesso:'7.00 am',
             colorePreferito:'Verde',
@@ -175,7 +175,7 @@ const main = new Vue({
         {
             name: 'Lorenzo',
             avatar: '_8',
-            visible: false,
+            visible: true,
             eta:21,
             ultimoAccesso:'3.00 am',
             colorePreferito:'Binaco',
@@ -198,6 +198,7 @@ const main = new Vue({
     clickEmojiStatus:false,
     statusUltimoAccesso:true,
     darkModeStatus:false,
+    search:'',
 
     },
     created(){
@@ -273,6 +274,25 @@ const main = new Vue({
         },
         darkMode(){
             this.darkModeStatus = ! this.darkModeStatus;
+        },
+        filtered(){
+
+             this.yourPropNameHere.forEach((element) => {
+
+                let x = element.name.toLowerCase().includes((this.search).toLowerCase())
+                
+                if(this.search !== ''){
+                    if(!x){
+                        element.visible = false;
+                    }else{
+                        element.visible = true;
+                    }
+                }else {
+                    element.visible = true;
+                }
+
+             })
+
         },
 
     }
