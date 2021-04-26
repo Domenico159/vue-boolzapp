@@ -75,6 +75,8 @@
 
             <div class="content">
 
+                <!-- Header content -->
+
                 <div class="header-content">
                     <div class="box-user-header">
                         <img :src="`./img/avatar${yourPropNameHere[indexActive].avatar}.jpg`" alt="">
@@ -93,7 +95,10 @@
                     </div>
                 </div>
 
-                <div :class="{dark:darkModeStatus}"
+                <!-- Content chat -->
+                <div 
+                ref="container"
+                :class="{dark:darkModeStatus}"
                 class="content-chat">
                     <div v-for="(element,index) in yourPropNameHere[indexActive].messages"
                     class="chat">
@@ -117,6 +122,7 @@
                     </div>
                 </div>
 
+                <!-- Footer -->
                 <div class="content-footer">
                     <i @click="activeEmoji"
                     class="far fa-smile"></i>

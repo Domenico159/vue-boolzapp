@@ -249,6 +249,8 @@ const main = new Vue({
         
             }
 
+            this.scrollToEnd();
+
             setTimeout(() =>{
                 this.statusUltimoAccesso = false
                 
@@ -270,6 +272,7 @@ const main = new Vue({
                     }
                 )
                 this.statusUltimoAccesso = true
+                this.scrollToEnd();
             },3000)
         },
         activeEmoji(){
@@ -300,6 +303,11 @@ const main = new Vue({
              })
 
         },
+        scrollToEnd(){    
+            setTimeout(() =>{
+                this.$refs.container.scrollTop = this.$refs.container.scrollHeight ;
+            },20)
+        }
 
     }
 
