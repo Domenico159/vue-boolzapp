@@ -296,6 +296,7 @@ const main = new Vue({
             },500)
 
             this.newMess = '';
+            this.emojiText = '',
             this.$refs.newMessage.focus()
 
             

@@ -139,7 +139,11 @@
                     v-model.trim="newMess"
                     ref="newMessage"
                     type="text" placeholder="Scrivi un messaggio">
-                    <i class="fas fa-microphone"></i>
+                    <i v-if="clickEmojiStatus == false || clickEmojiStatus == null" 
+                    class="fas fa-microphone"></i>
+                    <i @click="sendNewMess"
+                    v-if="clickEmojiStatus"
+                    class="fas fa-paper-plane"></i>
                 </div>
 
             </div>
