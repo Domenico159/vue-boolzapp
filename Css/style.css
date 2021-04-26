@@ -245,6 +245,51 @@ main .main-content .content .content-chat .box .message .data{
 }
 
 
+/* Box emoji */
+.box-emoji {
+    background-color: #32a093;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 0px;
+    overflow: hidden;
+}
+
+.box-emoji span{
+    font-size: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.box-emoji.active {
+    animation: boxEmoji-in 1s forwards;
+}
+
+.box-emoji.stop {
+    animation: boxEmoji-out 1s forwards;
+}
+
+@keyframes boxEmoji-in{
+    0%{
+        height: 0px;
+    }
+
+    100%{
+        height: 300px;
+    }
+}
+
+@keyframes boxEmoji-out{
+    0%{
+        height: 300px;
+    }
+
+    100%{
+        height: 0px;
+    }
+}
+
+
 
 main .main-content .content .content-footer{
     height: 50px;
@@ -257,31 +302,6 @@ main .main-content .content .content-footer{
     position: relative;
 }
 
-main .main-content .content .content-footer .emoji{
-    width: 400px;
-    height: 150px;
-    position: absolute;
-    top: -155px;
-    background-color: #fff;
-    left:10px;
-    display: none;
-    border-radius: 10px;
-}
-main .main-content .content .content-footer .emoji .box-emoji{
-    width: calc(100% / 12 - 10px );
-    margin: 5px;
-}
-
-main .main-content .content .content-footer .emoji i{
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-}
-
-main .main-content .content .content-footer .emoji.active{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
 
 main .main-content .content .content-footer i{
     font-size: 18px;

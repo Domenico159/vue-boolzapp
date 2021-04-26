@@ -178,7 +178,7 @@ const main = new Vue({
             visible: true,
             eta:21,
             ultimoAccesso:'3.00 am',
-            colorePreferito:'Binaco',
+            colorePreferito:'Bianco',
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
@@ -193,9 +193,48 @@ const main = new Vue({
             ],
         },
     ],
+    // Box emoji
+    emojiBox:[
+        '😊',
+        '😂',
+        '😊',
+        '😍',
+        '😒',
+        '😘',
+        '❤',
+        '😁',
+        '😉',
+        '😎',
+        '😢',
+        '🤦‍♂️',
+        '🤷‍♀️',
+        '✌',
+        '🤞',
+        '💖',
+        '🙌',
+        '🎉',
+        '😁',
+        '😪',
+        '🤐',
+        '😙',
+        '😫',
+        '👩',
+        '👨',
+        '🧑',
+        '🥶',
+        '😝',
+        '🤑',
+        '😈',
+        '👹',
+        '🙈',
+        '🙉',
+        '🙊',
+        '💑'
+    ],
+    emojiText:'',
     indexActive:0,
     newMess:'',
-    clickEmojiStatus:false,
+    clickEmojiStatus:null,
     statusUltimoAccesso:true,
     darkModeStatus:false,
     search:'',
@@ -230,7 +269,7 @@ const main = new Vue({
                     this.risposta('Ciao')
                     break;
                 case 'come stai?':
-                     this.risposta('Molto bene grazie')
+                     this.risposta('Molto bene grazie 😁 ,tu?')
                     break;
                     case 'ti piace la pizza?':
                     this.risposta('si')
@@ -278,7 +317,6 @@ const main = new Vue({
         activeEmoji(){
 
             this.clickEmojiStatus = !this.clickEmojiStatus ;
-            // console.log(this.clickEmojiStatus);
 
         },
         darkMode(){
@@ -307,7 +345,12 @@ const main = new Vue({
             setTimeout(() =>{
                 this.$refs.container.scrollTop = this.$refs.container.scrollHeight ;
             },20)
-        }
+        },
+        addEmoji(index){
+            this.emojiText += this.emojiBox[index]
+            this.newMess = this.emojiText;
+            this.$refs.newMessage.focus()
+        },
 
     }
 
