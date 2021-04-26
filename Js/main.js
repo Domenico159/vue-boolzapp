@@ -241,6 +241,8 @@ const main = new Vue({
                 case 'quanti anni hai?':
                      this.risposta(`Ho ${this.yourPropNameHere[this.indexActive].eta} anni`)
                     break;
+                default:
+                    this.risposta(`Scusa non ho capito`)
         
             }
 
