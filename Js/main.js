@@ -199,11 +199,12 @@ const main = new Vue({
     statusUltimoAccesso:true,
     darkModeStatus:false,
     search:'',
+    day:dayjs().format('D/MM/YYYY  H:mm.ss'),
 
     },
     created(){
 
-        // this.risposta()
+        dayjs.extend(dayjs_plugin_customParseFormat)
 
     },
     methods:{
@@ -218,7 +219,8 @@ const main = new Vue({
                 this.yourPropNameHere[this.indexActive].messages.push(
                     {
                         message:this.newMess,
-                        status:'sent'
+                        status:'sent',
+                        date:this.day,
                     }
                 )
             }
@@ -263,7 +265,8 @@ const main = new Vue({
                 this.yourPropNameHere[this.indexActive].messages.push(
                     {
                         message:element,
-                        status:'received'
+                        status:'received',
+                        date:this.day,
                     }
                 )
                 this.statusUltimoAccesso = true
