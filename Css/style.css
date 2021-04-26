@@ -334,6 +334,7 @@ section.message-responsive i {
     position: absolute;
     cursor: pointer;
     color: #fbfbfb;
+    filter: drop-shadow(2px -2px  rgba(0, 0, 0, 0.5));
 }
 
 .dark-mode .fa-sun.dark{
@@ -344,6 +345,7 @@ section.message-responsive i {
     font-size: 36px;
     position: absolute;
     cursor: pointer;
+    filter: drop-shadow(2px -2px  rgba(255, 255, 255,0.5));
 }
 
 .dark-mode .fa-moon.dark{

@@ -211,6 +211,7 @@ const main = new Vue({
         activeIndex(index){
 
             this.indexActive = index;
+            this.$refs.newMessage.focus()
         },
         sendNewMess(){
             if(this.newMess !== ''){
