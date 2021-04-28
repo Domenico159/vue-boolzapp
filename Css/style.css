@@ -445,15 +445,14 @@ main.dark .main-content .content .content-footer input{
 }
 main.dark .main-content .content .content-chat.dark .mess-received{
     background:#cdc8c6 ;
-    color: #000;
 }
 
 
 main .main-content .content .content-chat.dark .mess-send{
     background:#fa9d9d ;
-    color: #000;
 }
-main .main-content .content .content-chat.dark .mess-send span.data,
-main.dark .main-content .content .content-chat.dark .mess-received span.data{
-    color: #000;
+
+main.dark .main-content .content .content-chat.dark span{
+    filter: invert();
 }
+
