@@ -6,6 +6,22 @@
     transition: background 0.3s;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(124, 124, 124,0.4);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a2dffe;
+    border-radius: 10px;
+  }
 
 
 /* Main */
@@ -131,6 +147,7 @@ main .main-content .sidebar .contatti{
     overflow-y: auto;
 }
 
+
 main .main-content .sidebar .contatti ul li img{
     width: 60px;
     height: 60px;
@@ -254,7 +271,7 @@ main .main-content .content .content-chat .box .message .data{
 
 /* Box emoji */
 .box-emoji {
-    background-color: #32a093;
+    background-color: #f0f0f0;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -456,3 +473,6 @@ main.dark .main-content .content .content-chat.dark span{
     filter: invert();
 }
 
+main.dark .box-emoji {
+    background: #1e2428;
+}
