@@ -280,7 +280,7 @@ main .main-content .content .content-chat .box .message .data{
     flex-wrap: wrap;
     align-content: flex-start;
     height: 0px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .box-emoji span{
