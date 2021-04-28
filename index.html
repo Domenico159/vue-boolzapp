@@ -52,19 +52,20 @@
 
                 <!-- Search -->
                 <div class="search">
-                    <button><i class="fas fa-search"></i></button>
+                    <i class="fas fa-search"></i>
                     <input @keyup="filtered"
                     v-model.trim="search"
                     type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <!-- Contatti -->
-                <div :class="{dark:darkModeStatus}"
+                <div
                 class="contatti">
                     <ul>
                         <li v-for="(element,index) in yourPropNameHere"
                              v-if="element.visible"
                              @click="activeIndex(index)"
+                             :class="{active: index == indexActive}"
                         >
                             <img :src=" `./img/avatar${element.avatar}.jpg` " alt="">
                             <h4>{{ element.name }}</h4>

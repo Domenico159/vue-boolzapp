@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    transition: background 0.3s;
 }
 
 
@@ -97,37 +98,36 @@ main .main-content .sidebar .notifiche a{
 
 main .main-content .sidebar .search{
     background-color: #fbfbfb;
-    padding: 5px;
     display: flex;
+    min-height: 50px;
+    height: 50px;
+    align-items: center;
+    padding: 10px 5px; 
+    position: relative;
 }
 
-main .main-content .sidebar .search button{
-    width: 70px;
-    outline: none;
-    border: none;
-    background: #fff;
-    border-right: 1px solid #ededed;
-    border-radius: 5px 0 0 5px;
+main .main-content .sidebar .search i {
+    position: absolute;
+    left: 20px;
+    font-size: 14px;
+    color: #b0b3b5;
     cursor: pointer;
 }
 
-main .main-content .sidebar .search button i{
-    color:  #bababa;
-}
 
 main .main-content .sidebar .search input{
     width: 100%;
     height: 30px;
     outline: none;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 15px;
     padding: 5px 10px;
+    padding-left: 60px;
 }
 
 main .main-content .sidebar .contatti{
     flex-grow: 1;
     background-color: #fff;
-    margin-top: 5px;
     overflow-y: auto;
 }
 
@@ -140,15 +140,22 @@ main .main-content .sidebar .contatti ul li img{
 
 main .main-content .sidebar .contatti ul li{
     list-style: none;
-    margin-bottom: 3px;
     background-color: #fff;
     padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #ededed;
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: background 0.4s;
+    border-bottom: 1px solid rgba(202, 202, 202,0.4);
+}
+
+
+
+main .main-content .sidebar .contatti ul li:hover,
+main .main-content .sidebar .contatti ul li.active{
+    background: rgb(216, 216, 216);
 }
 main .main-content .sidebar .contatti ul li:last-child{
     border: none;
@@ -271,11 +278,11 @@ main .main-content .content .content-chat .box .message .data{
 
 @keyframes boxEmoji-in{
     0%{
-        min-height: 0px;
+        height: 0px;
     }
 
     100%{
-        min-height: 250px;
+        height: 250px;
     }
 }
 
@@ -349,6 +356,12 @@ section.message-responsive i {
     left: 30px;
 }
 
+main.dark .main-content .content .header-content,
+main.dark .main-content .content .content-footer,
+main.dark .main-content .sidebar .user{
+    background: #2a2f32;
+}
+
 .dark-mode .fa-sun{
     font-size: 36px;
     position: absolute;
@@ -378,31 +391,46 @@ main .main-content .content .content-chat.dark{
 }
 
 main.dark{
-    background: linear-gradient(
-        to bottom ,
-        #18574f 0%,
-        #18574f 15%,
-        #696969 15%,
-        #696969 100%
-    );
+    background: #323739;
+    color: #fff;
+    transition: background 0.3s;
 }
 
-
-
-main.dark .main-content .sidebar .contatti.dark{
-    background-color: #16161a;
+main.dark .main-content .sidebar .contatti{
+    background-color: #131c20;
 }
+
+main.dark .main-content .sidebar .contatti li{
+    background-color: #131c20;
+    color: #fff;
+}
+main.dark .main-content .sidebar .contatti li.active,
+main.dark .main-content .sidebar .contatti li:hover{
+    background: #323739;
+}
+
+main.dark .main-content .sidebar .contatti ul li:first-child{
+    border-top: 1px solid rgba(202, 202, 202,0.4);}
 
 main.dark .main-content .sidebar .notifiche{
-    background-color: #72757e;
+    background-color: #095373;
     color:#fffffe ;
+}
+
+main.dark .main-content .sidebar .search{
+    background: #131c20;
+}
+
+main.dark .main-content .sidebar .search input{
+    background: #323739;
+    color: #fff;
 }
 main.dark .main-content .sidebar .notifiche a{
     color:#fffffe ;
 }
 
 main.dark .main-content .sidebar .notifiche .box-img{
-    color:#72757e ;
+    color:#095373 ;
 }
 
 main.dark .main-content .sidebar .contatti.dark li{
@@ -411,8 +439,21 @@ main.dark .main-content .sidebar .contatti.dark li{
     border: none;
 }
 
-
-main.dark  img{
-    filter: grayscale(20%);
+main.dark .main-content .content .content-footer input{
+    background: #323739;
+    color: #fff;
+}
+main.dark .main-content .content .content-chat.dark .mess-received{
+    background:#cdc8c6 ;
+    color: #000;
 }
 
+
+main .main-content .content .content-chat.dark .mess-send{
+    background:#fa9d9d ;
+    color: #000;
+}
+main .main-content .content .content-chat.dark .mess-send span.data,
+main.dark .main-content .content .content-chat.dark .mess-received span.data{
+    color: #000;
+}
